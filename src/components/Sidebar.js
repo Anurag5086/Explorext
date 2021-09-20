@@ -48,7 +48,7 @@ export default function Sidebar() {
           </span>
         </div>
         <FileTree />
-        <Button variant="contained">Lock</Button>
+        <Button variant="outlined" style={{ color: "white" }}>Lock</Button>
       </Drawer>
     </Box>
   );
