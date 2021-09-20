@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 const document = require("./routes/Document");
@@ -11,7 +13,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 mongoose
-  .connect("mongodb://anurag:test@cluster0-shard-00-00.qdcqc.mongodb.net:27017,cluster0-shard-00-01.qdcqc.mongodb.net:27017,cluster0-shard-00-02.qdcqc.mongodb.net:27017/explorext?ssl=true&replicaSet=atlas-eqn8rl-shard-0&authSource=admin&retryWrites=true&w=majority", {
+  .connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
