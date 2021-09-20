@@ -1,5 +1,5 @@
 export function addDocumentAction(docName, type) {
-  return fetch("http://localhost:5000/addDocument", {
+  return fetch("https://explore-backend.herokuapp.com/addDocument", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,7 +13,7 @@ export function addDocumentAction(docName, type) {
 }
 
 export function getDocumentsAction() {
-  return fetch("http://localhost:5000/getDocuments", {
+  return fetch("https://explore-backend.herokuapp.com/getDocuments", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -22,7 +22,7 @@ export function getDocumentsAction() {
 }
 
 export function getFoldersAction() {
-  return fetch("http://localhost:5000/getFolders", {
+  return fetch("https://explore-backend.herokuapp.com/getFolders", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
